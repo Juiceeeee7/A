@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package common_identity;
+
+message stGeneratorIDCode32Req{
+
+}
+
+message stGeneratorIDCode32Rsp{
+  string idCode32= 1;
+}
+
+message stGeneratorIDCode16Req{
+
+}
+
+message stGeneratorIDCode16Rsp{
+  string idCode16= 1;
+}
+
+service common_identity {
+  rpc GeneratorIDCode16Req(stGeneratorIDCode16Req) returns (stGeneratorIDCode16Rsp) {}
+  rpc GeneratorIDCode32Req(stGeneratorIDCode32Req) returns (stGeneratorIDCode32Rsp) {}
+
+}
